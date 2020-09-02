@@ -856,8 +856,7 @@ if [[ $answer == FINISH ]]
 then
 clear 
 echo -e "" 
-screen 
-./cnc 
+screen ./cnc 
 read 
 fi 
 done
