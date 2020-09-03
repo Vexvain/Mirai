@@ -81,18 +81,11 @@ echo -e ""
 yum update -y 
 echo -e "${LIGHTCYAN}Finished Updating.." 
 echo -e "${LIGHTGREEN}Now installing Needed dependencies.." 
-yum install 
-epel-release -y 
+yum install epel-release -y 
 yum groupinstall "Development Tools" -y 
 yum install gmp-devel -y 
 ln -s /usr/lib64/libgmp.so.3 /usr/lib64/libgmp.so.10 
-yum install screen 
-wget bzip2 
-gcc nano gcc-c++ electric-fence 
-sudo git libc6-dev httpd xinetd 
-tftpd tftp-server 
-mysql mysql-server 
-gcc glibc-static -y 
+yum install screen wget bzip2 gcc nano gcc-c++ electric-fence sudo git libc6-dev httpd xinetd tftpd tftp-server mysql mysql-server gcc glibc-static -y 
 service mysqld stop 
 service mysqld start 
 service mysqld restart 
